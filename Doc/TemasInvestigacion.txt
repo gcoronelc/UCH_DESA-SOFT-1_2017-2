@@ -1,0 +1,32 @@
+
+- Datomic - Data Log
+  Lipa, Trinidad
+
+  
+- Arquitectura Cebolla
+
+
+- Clojure
+
+
+- ClojureScript
+
+
+- Web Service SOAP con Spring Boot
+
+
+- Web Service REST con Spring Boot
+  Huayhuas, 
+
+  
+- Domain-driven Design 
+
+
+- Lean UX
+  
+
+- MicroServicios con Spring Boot
+
+
+- Arquitectura Hexagonal
+
