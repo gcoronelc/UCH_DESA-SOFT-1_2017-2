@@ -1,0 +1,15 @@
+NOTA ACTITUDINAL
+===================================================
+
+> Tolerancia de Asistencia
+    - Asistencia: Hasta las 6:20 minutos
+    - Tardanza: De 6:20 a 7:00 Tardanza   (-1)
+    - Falta: Después de las 7:00          (-1.5)
+
+> Control 1: Semana 3
+
+> Control 2: Semana 6
+
+
+
+
