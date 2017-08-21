@@ -1,4 +1,4 @@
-NOTA ACTITUDINAL
+NOTA ACTITUDINAL - ETAPA 1
 ===================================================
 
 > Tolerancia de Asistencia
@@ -11,5 +11,15 @@ NOTA ACTITUDINAL
 > Control 2: Semana 6
 
 
+NOTA ACTITUDINAL - ETAPA 2
+===================================================
 
+> Tolerancia de Asistencia
+    - Asistencia: Hasta las 6:20 minutos
+    - Tardanza: De 6:20 a 7:00 Tardanza   (-1)
+    - Falta: Después de las 7:00          (-1.5)
+
+> Control 1: Semana 11
+
+> Control 2: Semana 14
 
