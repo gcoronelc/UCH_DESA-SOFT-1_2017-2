@@ -4,6 +4,7 @@
 
   
 - Arquitectura Cebolla
+  Sanchez y Palomo
 
 
 - Clojure
@@ -20,7 +21,7 @@
 
   
 - Domain-driven Design 
-
+  Ordoñez
 
 - Lean UX
   
@@ -29,4 +30,9 @@
 
 
 - Arquitectura Hexagonal
+
+
+
+
+
 
