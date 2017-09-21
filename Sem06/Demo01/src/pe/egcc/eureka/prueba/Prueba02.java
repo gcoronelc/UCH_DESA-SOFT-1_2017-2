@@ -6,6 +6,7 @@ import java.util.Map;
 import pe.egcc.eureka.service.impl.EurekaServiceImpl;
 import pe.egcc.eureka.service.spec.EurekaServiceSpec;
 
+
 public class Prueba02 {
 
   

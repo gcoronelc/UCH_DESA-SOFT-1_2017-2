@@ -7,8 +7,9 @@ import java.sql.SQLException;
 public final class AccesoDB {
   
   // Parámetros de conexión
-  private static final String CN_DRIVER = "oracle.jdbc.OracleDriver";
-  private static final String CN_URL = "jdbc:oracle:thin:@localhost:1521:XE";
+  private static final String CN_DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+  private static final String CN_URL = "jdbc:sqlserver://localhost:1433;" +  
+	         "databaseName=eurekabank;user=eureka;password=admin";
   private static final String CN_USER = "eureka";
   private static final String CN_PASS = "admin";
   
