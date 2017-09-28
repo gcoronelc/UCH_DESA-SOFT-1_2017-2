@@ -83,6 +83,7 @@ VALUES('20170818','UCH','PROGRAMACION','JAVA WEB',800.0,8);
 INSERT INTO VENTA(fecha,empresa,categoria,nombre,precio,cantidad) 
 VALUES('20170920','ISIL','PROGRAMACION','DESARROLLO CON ANDROID',800.0,15);
 
+
 SELECT * FROM VENTA;
 
 -- =============================================
