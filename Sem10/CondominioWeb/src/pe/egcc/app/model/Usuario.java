@@ -51,11 +51,6 @@ public class Usuario {
     this.estado = estado;
   }
   
-  /*
-   * select idpersona,idrol,usuario,estado 
-from usuario 
-where usuario = 'gustavo'
-and clave = HashBytes('SHA1','gustavo');
-   */
+
   
 }
