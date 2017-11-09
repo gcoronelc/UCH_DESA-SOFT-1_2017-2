@@ -74,7 +74,7 @@ CREATE TABLE OBLIGACION
 -- =============================================
 
 
-- Tabla TOBLIGACION
+-- Tabla TOBLIGACION
 
 INSERT INTO TOBLIGACION(IDTOBLIGACION,NOMBRE) VALUES
 (1,'AGUA'),
