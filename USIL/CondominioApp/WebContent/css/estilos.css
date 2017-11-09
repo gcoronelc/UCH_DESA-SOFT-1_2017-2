@@ -1,0 +1,88 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: #FFF8DC;
+	color: #34495e;
+	font-size: 14px;
+	font-family: Arial;
+	padding: 5px;
+}
+
+h1{
+	font-size: 2em;
+	color: #2c3e50;
+	border-bottom: 2px solid #2c3e50;
+}
+
+.egcc_panel{
+	border: 2px solid #800000;
+	border-radius: 10px;
+	background-color:white;
+	color: #34495e;
+	margin: 5px;
+	padding: 5px;
+}
+
+.egcc_btn_default{
+	border: 1px solid #1E90FF;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  color:white;	
+  height: 30px;
+}
+
+
+.egcc_pagina{
+  width: 900px;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #FFFACD;
+}
+
+.egcc_cabecera{
+  width:880px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.egcc_menu{
+  width: 880px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #6495ED;
+  color: white;
+}
+
+.egcc_contenido{
+  width: 880px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  color: #34495e;
+}
+
+.egcc_pie{
+  width: 880px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #2980b9;
+  color: white;
+}
+
+
+.egcc_error{
+  font-size: 1.3em;	
+  margin: 5px;
+  padding: 5px;
+  background-color: #e74c3c;
+  color: #ecf0f1;
+}
+
+.egcc_info{
+  font-size: 1.3em;	
+  margin: 5px;
+  padding: 5px;
+  background-color: #CCF8D2;
+  color: #34495e;
+}
