@@ -25,7 +25,7 @@ public class Prueba02 {
     
     // Prueba de la clase de servicio
     try {
-      service.generaCuotaMant(2017, 3, 2);  
+      service.generaCuotaMant(2017, 2, 2);  
       System.out.println("Ok");
     } catch (Exception e) {
       System.out.println("ERROR: " + e.getMessage());

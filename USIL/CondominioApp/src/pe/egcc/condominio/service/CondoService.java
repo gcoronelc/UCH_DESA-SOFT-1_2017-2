@@ -3,9 +3,12 @@ package pe.egcc.condominio.service;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import pe.egcc.condominio.model.Obligacion;
 
 @Service
 public class CondoService extends AbstractDBSupport {
@@ -55,6 +58,22 @@ public class CondoService extends AbstractDBSupport {
     }
     
   }
+  
+  
+  public List<Obligacion> leerObligaciones( Integer periodo, Integer mes, Integer tipo){
+	  
+	  String sql = "select id,inmueble,codigo,torre,piso,descripcion, "
+	  		+ "obligacion,nomobligacio,anio,mes, "
+	  		+ "vencimiento,importe,pagada "
+	  		+ "from v_obligacion  "
+	  		+ "where obligacion = ?";
+	  
+	  List<Obligacion> lista = jdbcTemplate.query(sql,
+			  new BeanPropertyRowMapper<Obligacion>(Obligacion.class), tipo);
+	  
+	  return lista;
+  }
+  
   
   
 }

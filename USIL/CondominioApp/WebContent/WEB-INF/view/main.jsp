@@ -22,7 +22,7 @@
       <jsp:include page="menu.jsp"/>
     </div>
     
-    <div class="egcc_contenido">
+    <div id="egcc_contenido" class="egcc_contenido">
       <div style="text-align: center;">
         <img src='<c:url value="img/portada.jpg" />' />
       </div>
