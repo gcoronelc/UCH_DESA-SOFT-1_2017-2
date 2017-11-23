@@ -1,6 +1,6 @@
-CREATE VIEW V_OBLIGACION(
+ALTER VIEW V_OBLIGACION(
 id,inmueble,codigo,torre,piso,descripcion,
-obligacion,nomobligacio,anio,mes,
+obligacion,nomobligacion,anio,mes,
 vencimiento,importe,pagada
 ) AS
 select 

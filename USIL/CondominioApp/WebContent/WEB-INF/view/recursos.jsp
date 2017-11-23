@@ -16,8 +16,8 @@ href='<c:url value="/menu/menu.css" />'>
 
 <!-- JavaScript -->
 
-<script scr='<c:url value="/jquery/jquery.min.js" />'></script>
-<script scr='<c:url value="/js/main.js" />'></script>
+<script src='<c:url value="/jquery/jquery.min.js" />'></script>
+<script src='<c:url value="/js/main.js" />'></script>
 
 
 
