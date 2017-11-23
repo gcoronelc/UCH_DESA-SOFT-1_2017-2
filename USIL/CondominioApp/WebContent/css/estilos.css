@@ -31,6 +31,10 @@ h1{
   height: 30px;
 }
 
+.topspace{
+	margin-top: 10px;
+}
+
 
 .egcc_pagina{
   width: 900px;

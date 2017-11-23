@@ -75,7 +75,30 @@
 	
 	</table>
 	
+	<div id="divGrabar" style="display: none;">
+		<input id="btnGrabar" class="egcc_btn_default topspace" type="button" value="Grabar" />
+	</div>
+	
 	<script>
+	
+	fnCargarTabla();
+	
+	$("#btnGrabar").click(function(){
+		var data = $("#form1").serialize();
+		$.post("grabarObliMant.htm",data,function(response){
+			
+			var objJson =  $.parseJSON(response);
+			
+			if( objJson.code == 1 ){
+				fnCargarTabla();
+				alert("Proceso ejecutado correctamente.");
+			} else {
+				alert(objJson.mensaje);
+			}
+			
+			
+		});
+	});
 	
 	$("#periodo").change(fnCargarTabla);
 	
@@ -83,6 +106,7 @@
 	
 	function fnCargarTabla(){
 		
+		$("#divGrabar").hide();
 		$("#tabla").html("");
 		var data = $("#form1").serialize();
 		
@@ -95,6 +119,7 @@
 				$.post("generaObligaciones.htm", data, function(dataJson){
 					var lista = $.parseJSON(dataJson);
 					mostrarList(lista);
+					$("#divGrabar").show();
 				});
 				
 			} else {

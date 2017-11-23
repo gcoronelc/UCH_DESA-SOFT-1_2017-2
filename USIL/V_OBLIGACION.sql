@@ -1,4 +1,4 @@
-ALTER VIEW V_OBLIGACION(
+CREATE VIEW V_OBLIGACION(
 id,inmueble,codigo,torre,piso,descripcion,
 obligacion,nomobligacion,anio,mes,
 vencimiento,importe,pagada
