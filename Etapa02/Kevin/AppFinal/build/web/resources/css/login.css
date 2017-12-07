@@ -1,0 +1,29 @@
+/* 
+    Created on : 30-nov-2017, 19:07:03
+    Author     : Kevin
+*/
+.imagen_logo{
+    width:100%;
+    text-align:center;
+}
+.dedicatoria{
+    color: #747171;
+}
+.container_dedicatoria{
+    padding: 5px;
+    text-align: center;
+}
+.container_login{
+    box-shadow: -1px 0px 23px 0px #747171;
+    background: #ffffff;
+}
+html, body {
+    background: #75cfe3 !important;
+}
+.error_login{
+    color: #ec5913;
+    width: 100%;
+    text-align: center;
+}
+
+
