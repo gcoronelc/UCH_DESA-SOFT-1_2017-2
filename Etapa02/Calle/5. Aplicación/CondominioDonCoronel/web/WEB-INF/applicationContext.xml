@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+    <bean class="org.springframework.orm.hibernate3.LocalSessionFactoryBean" id="sessionFactory">
+        <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"></property>
+        <property name="configLocation">
+            <value>classpath:hibernate.cfg.xml</value>
+        </property>
+    </bean>
+    
+    <!-- Inicia Administrador -->
+    <bean class="pe.java.model.dao.impl.DaoAdministradorImpl" id="daoAdministradorImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.AdministradorServiceImpl" id="administradorServiceImpl">
+        <property name="daoAdministrador" ref="daoAdministradorImpl"></property>
+    </bean>    
+    
+    <bean class="pe.java.controller.AdministradorController" id="administradorController">
+        <property name="administradorService" ref="administradorServiceImpl"></property>
+        <property name="usuarioService" ref="usuarioServiceImpl"></property>
+        <property name="condominioService" ref="condominioServiceImpl"></property>
+    </bean>
+    <!-- Fin Administrador -->
+    
+    <!-- Inicia Condominio -->
+    <bean class="pe.java.model.dao.impl.DaoCondominioImpl" id="daoCondominioImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.CondominioServiceImpl" id="condominioServiceImpl">
+        <property name="daoCondominio" ref="daoCondominioImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.CondominioController" id="condominioController">
+        <property name="condominioService" ref="condominioServiceImpl"></property>
+    </bean>
+    <!-- Fin Condominio -->
+    
+    <!-- Inicia Cuota -->
+    <bean class="pe.java.model.dao.impl.DaoCuotaImpl" id="daoCuotaImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.CuotaServiceImpl" id="cuotaServiceImpl">
+        <property name="daoCuota" ref="daoCuotaImpl"></property>
+    </bean>    
+    
+    <bean class="pe.java.controller.CuotaController" id="cuotaController">
+        <property name="cuotaService" ref="cuotaServiceImpl"></property>
+        <property name="eventoService" ref="eventoServiceImpl"></property>
+    </bean>
+    <!-- Fin Cuota -->
+    
+    <!-- Inicia Departamento -->
+    <bean class="pe.java.model.dao.impl.DaoDepartamentoImpl" id="daoDepartamentoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.DepartamentoServiceImpl" id="departamentoServiceImpl">
+        <property name="daoDepartamento" ref="daoDepartamentoImpl"></property>
+    </bean>   
+    
+    <bean class="pe.java.controller.DepartamentoController" id="departamentoController">
+        <property name="departamentoService" ref="departamentoServiceImpl"></property>
+        <property name="edificioService" ref="edificioServiceImpl"></property>
+    </bean> 
+    <!-- Fin Departamento -->
+    
+    <!-- Inicia Edificio -->
+    <bean class="pe.java.model.dao.impl.DaoEdificioImpl" id="daoEdificioImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.EdificioServiceImpl" id="edificioServiceImpl">
+        <property name="daoEdificio" ref="daoEdificioImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.EdificioController" id="edificioController">
+        <property name="edificioService" ref="edificioServiceImpl"></property>
+        <property name="condominioService" ref="condominioServiceImpl"></property>
+    </bean>    
+    <!-- Fin Edificio -->
+    
+    <!-- Inicia Evento -->
+    <bean class="pe.java.model.dao.impl.DaoEventoImpl" id="daoEventoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.EventoServiceImpl" id="eventoServiceImpl">
+        <property name="daoEvento" ref="daoEventoImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.EventoController" id="eventoController">
+        <property name="eventoService" ref="eventoServiceImpl"></property>
+    </bean>
+    <!-- Fin Evento -->
+    
+    <!-- Inicia Pago -->
+    <bean class="pe.java.model.dao.impl.DaoPagoImpl" id="daoPagoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.PagoServiceImpl" id="pagoServiceImpl">
+        <property name="daoPago" ref="daoPagoImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.PagoController" id="pagoController">
+        <property name="pagoService" ref="pagoServiceImpl"></property>
+    </bean>
+    <!-- Fin Pago -->
+    
+    <!-- Inicia Queja -->
+    <bean class="pe.java.model.dao.impl.DaoQuejaImpl" id="daoQuejaImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.QuejaServiceImpl" id="quejaServiceImpl">
+        <property name="daoQueja" ref="daoQuejaImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.QuejaController" id="quejaController">
+        <property name="quejaService" ref="quejaServiceImpl"></property>
+        <property name="condominioService" ref="condominioServiceImpl"></property>
+    </bean>
+    <!-- Fin Queja -->
+    
+    <!-- Inicia Residente -->
+    <bean class="pe.java.model.dao.impl.DaoResidenteImpl" id="daoResidenteImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.ResidenteServiceImpl" id="residenteServiceImpl">
+        <property name="daoResidente" ref="daoResidenteImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.ResidenteController" id="residenteController">
+        <property name="residenteService" ref="residenteServiceImpl"></property>
+        <property name="usuarioService" ref="usuarioServiceImpl"></property>
+        <property name="departamentoService" ref="departamentoServiceImpl"></property>
+    </bean>
+    <!-- Fin Residente -->
+    
+    <!-- Inicia Usuario -->
+    <bean class="pe.java.model.dao.impl.DaoUsuarioImpl" id="daoUsuarioImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.UsuarioServiceImpl" id="usuarioServiceImpl">
+        <property name="daoUsuario" ref="daoUsuarioImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.UsuarioController" id="usuarioController">
+        <property name="usuarioService" ref="usuarioServiceImpl"></property>
+    </bean>
+    <!-- Fin Usuario -->
+    
+    <!-- Inicia Visita -->
+    <bean class="pe.java.model.dao.impl.DaoVisitaImpl" id="daoVisitaImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <bean class="pe.java.service.impl.VisitaServiceImpl" id="visitaServiceImpl">
+        <property name="daoVisita" ref="daoVisitaImpl"></property>
+    </bean>
+    
+    <bean class="pe.java.controller.VisitaController" id="visitaController">
+        <property name="visitaService" ref="visitaServiceImpl"></property>
+        <property name="departamentoService" ref="departamentoServiceImpl"></property>
+    </bean>
+    <!-- Fin Visita -->
+    
+    <!-- Inicia Navega -->
+    <bean class="pe.java.controller.NavegaController" id="navegaController"></bean>
+    <!-- Fin Navega -->
+
+</beans>

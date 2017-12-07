@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="db_adonde"/>
+  <table-filter match-name="queja"/>
+  <table-filter match-name="departamento"/>
+  <table-filter match-name="condominio"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="pago"/>
+  <table-filter match-name="visita"/>
+  <table-filter match-name="edificio"/>
+  <table-filter match-name="administrador"/>
+  <table-filter match-name="cuota"/>
+  <table-filter match-name="residente"/>
+  <table-filter match-name="evento"/>
+</hibernate-reverse-engineering>

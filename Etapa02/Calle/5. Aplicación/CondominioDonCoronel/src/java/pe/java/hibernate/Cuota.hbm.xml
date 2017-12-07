@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 18, 2013 3:36:25 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pe.java.hibernate.Cuota" table="cuota" catalog="db_adonde">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="evento" class="pe.java.hibernate.Evento" fetch="select">
+            <column name="evento_id" not-null="true" />
+        </many-to-one>
+        <property name="monto" type="string">
+            <column name="monto" length="250" not-null="true" />
+        </property>
+        <property name="termina" type="timestamp">
+            <column name="termina" length="19" not-null="true" />
+        </property>
+        <set name="pagos" inverse="true">
+            <key>
+                <column name="cuota_id" not-null="true" />
+            </key>
+            <one-to-many class="pe.java.hibernate.Pago" />
+        </set>
+    </class>
+</hibernate-mapping>

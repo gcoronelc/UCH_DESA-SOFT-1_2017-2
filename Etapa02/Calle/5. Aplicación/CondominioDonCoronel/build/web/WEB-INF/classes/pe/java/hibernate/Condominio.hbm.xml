@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 18, 2013 3:36:25 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pe.java.hibernate.Condominio" table="condominio" catalog="db_adonde">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="250" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="250" not-null="true" />
+        </property>
+        <set name="edificios" inverse="true">
+            <key>
+                <column name="condominio_id" not-null="true" />
+            </key>
+            <one-to-many class="pe.java.hibernate.Edificio" />
+        </set>
+        <set name="quejas" inverse="true">
+            <key>
+                <column name="condominio_id" not-null="true" />
+            </key>
+            <one-to-many class="pe.java.hibernate.Queja" />
+        </set>
+        <set name="administradors" inverse="true">
+            <key>
+                <column name="condominio_id" not-null="true" />
+            </key>
+            <one-to-many class="pe.java.hibernate.Administrador" />
+        </set>
+    </class>
+</hibernate-mapping>
