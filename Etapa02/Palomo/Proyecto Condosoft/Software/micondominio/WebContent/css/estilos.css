@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: #80DEEA;
+	font-family: Arial;
+	font-size: 12px;
+	color: #34495e;
+}
+
+.egcc_pagina{
+	width: 900px;
+	margin: 5px auto;
+	padding: 5px;
+	background-color: #FFFACD;
+}
+
+.egcc_cabecera{
+	width:880px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+}
+
+.egcc_menu{
+	width: 880px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #6495ED;
+	color: white;
+}
+
+.egcc_contenido{
+	width: 880px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	color: #34495e;
+}
+
+.egcc_pie{
+	width: 880px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #2980b9;
+	color: white;
+}
